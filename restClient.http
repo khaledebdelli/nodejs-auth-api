@@ -1,0 +1,49 @@
+POST http://localhost:3000/api/users HTTP/1.1
+content-type: application/json
+
+{
+    "email": "khaled.ebdelli.it@gmail.com",
+    "firstName": "khaled",
+    "lastName": "ebdelli",
+    "password": "khlech8940",
+    "passwordConfirmation": "khlech8940"
+}
+
+###
+POST http://localhost:3000/api/users/verify/6334f14b3df0ce5140a9fb79/WVYk3a92PurWdAvQGhwZl HTTP/1.1
+content-type: application/json
+
+###
+POST http://localhost:3000/api/users/forgotpassword HTTP/1.1
+content-type: application/json
+
+{
+    "email": "khaled.ebdelli.it@gmail.com"
+}
+
+
+###
+POST http://localhost:3000/api/users/resetpassword/6334f14b3df0ce5140a9fb79/V4o1Gl8L7jlCJ4Xa4hu8n HTTP/1.1
+content-type: application/json
+
+{
+    "password": "khlech8940",
+    "passwordConfirmation": "khlech8940"
+}
+
+###
+POST http://localhost:3000/api/sessions HTTP/1.1
+content-type: application/json
+
+{
+    "email": "khaled.ebdelli.it@gmail.com",
+    "password": "khlech8940"
+}
+
+###
+GET http://localhost:3000/api/users/me HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzM0ZjE0YjNkZjBjZTUxNDBhOWZiNzkiLCJlbWFpbCI6ImtoYWxlZC5lYmRlbGxpLml0QGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6ImtoYWxlZCIsImxhc3ROYW1lIjoiZWJkZWxsaSIsImNyZWF0ZWRBdCI6IjIwMjItMDktMjlUMDE6MTM6NDcuMDg2WiIsInVwZGF0ZWRBdCI6IjIwMjItMDktMjlUMjI6MjI6MzQuOTU5WiIsImlhdCI6MTY2NDU0NTg3NiwiZXhwIjoxNjY0NTQ2Nzc2fQ.Q0Ymxid3tjrMcFBJ83SaRx_aEXJ4T9mqoW06PPvK_cBX8XCUgz_pcVDFXQNWptYEeK8T32-_wVjhTlgO8XEpPkO5PpZt4_po0TFUVra11TzGlVSol8zEYG4eIPULc0NI-zEv4A_Q4QUbMHy878lY7Wzy39r_Yzc_RGnz3PW0Jk4
+
+###
+POST http://localhost:3000/api/sessions/refresh HTTP/1.1
+x-refresh: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uIjoiNjMzNmY0NTQ4ZTQ2MTI4YWI0YzMzYzA1IiwiaWF0IjoxNjY0NTQ1ODc3LCJleHAiOjE2OTYxMDM0Nzd9.gXVqgkjzlapshRyAjNBPSfKb1JoGkiNVE1vwuZUzLdGsNMABtX3-TRJrtKAReY2_F8znh4LkZXOgRI4d5xmyG4urFYts2B-FFmXiP8sOHuBQv_q90PHDyhHqNCDiiFM1rcsDBpOxKpSaJLjT-AQerqFk-hnNDIuPDkwHyIXSFKk
